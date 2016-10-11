@@ -55,10 +55,11 @@ public class MyUtils {
             }
         }
 
-        System.out.println(año);
-        System.out.println(mes);
-        System.out.println(dia);
+        System.out.print(año+", ");
+        System.out.print(mes+", ");
+        System.out.print(dia+"  --  ");
         
+        System.out.println(resultat);
         
         return resultat;
     }
@@ -74,8 +75,8 @@ public class MyUtils {
         if (numero == 0) {
             return 1;
         } else {
-            double resultat = numero * factorial(numero - 1);
-            return resultat;
+            return   numero * factorial(numero - 1);
         }
+        
     }
 }
