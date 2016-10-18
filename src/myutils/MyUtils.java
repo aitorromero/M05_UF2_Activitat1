@@ -20,7 +20,7 @@ public class MyUtils {
      */
     public static String inverteix(String cadena) {
         String resultat = "";
-        if(!cadena.equals(resultat)){
+        if(!cadena.equals("null")){
             for (int i = cadena.length()-1; i >=0; i--) {
                 resultat=resultat + cadena.charAt(i);
             }
