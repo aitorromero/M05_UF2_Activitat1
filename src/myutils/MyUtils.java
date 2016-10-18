@@ -24,6 +24,8 @@ public class MyUtils {
             for (int i = cadena.length()-1; i >=0; i--) {
                 resultat=resultat + cadena.charAt(i);
             }
+        }else{
+            resultat="null";
         }
         return resultat;
     }
@@ -50,8 +52,14 @@ public class MyUtils {
         }else{
             if(mes<0){
                 resultat=año-1;
-            }else{
+            }else if(mes>0){
                 resultat=año;
+            }else{
+                if(dia<0){
+                    resultat=año-1;
+                }else{
+                    resultat=año;
+                }
             }
         }
 
@@ -70,13 +78,12 @@ public class MyUtils {
      * @return retorna el factorial d'un número. Si el nombre es negatiu retorna
      * -1.
      */
-    public static double factorial(double numero) {
-
-        if (numero == 0) {
+    public static double factorial(int numero) {
+        if (numero==0)
             return 1;
-        } else {
-            return   numero * factorial(numero - 1);
+        else
+            return numero * factorial(numero-1);
         }
         
-    }
 }
+
