@@ -20,14 +20,15 @@ public class MyUtils {
      */
     public static String inverteix(String cadena) {
         String resultat = "";
-        if(!cadena.equals("null")){
+        String result="";
+        if(!cadena.equals(resultat)){
             for (int i = cadena.length()-1; i >=0; i--) {
-                resultat=resultat + cadena.charAt(i);
+                result+= cadena.charAt(i);
             }
         }else{
-            resultat="null";
+            result="null";
         }
-        return resultat;
+        return result;
     }
 
     /**
@@ -79,11 +80,13 @@ public class MyUtils {
      * -1.
      */
     public static double factorial(int numero) {
-        if (numero==0)
+        if (numero<0){
+            return -1;
+        }if (numero==0){
             return 1;
-        else
+        }else{
             return numero * factorial(numero-1);
         }
-        
+    }    
 }
 
